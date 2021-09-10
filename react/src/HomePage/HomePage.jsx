@@ -19,7 +19,7 @@ class HomePage extends React.Component {
     }
 
     render() {
-        const { currentUser, userFromApi, isAdmin } = this.state;
+        const { currentUser, userFromApi } = this.state;
         return (
             <div>
                 <h1>Home</h1>

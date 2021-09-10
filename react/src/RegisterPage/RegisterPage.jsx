@@ -64,9 +64,9 @@ function RegisterPage() {
         e.preventDefault();
 
         setSubmitted(true);
-        if (user.firstName && user.lastName && user.username && user.password) {
+        if (user.firstName && user.lastName && user.email && user.info && user.username && user.password) {
             userService.register(user)
-            history.push('/admin');
+            history.push('/');
         }
     }
 
@@ -130,11 +130,11 @@ function RegisterPage() {
                     }
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary">
+                    <button className="btn btn-primary float-left">
                         {registering && <span className="spinner-border spinner-border-sm mr-1"></span>}
                         Register
                     </button>
-                    <Link to="/login" className="btn btn-link">Cancel</Link>
+                    <Link to="/" className="btn btn-secondary float-right">Cancel</Link>
                 </div>
             </form>
         </div>

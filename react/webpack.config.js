@@ -11,11 +11,6 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader'
-            },
-            {
-                test: /\.js$/,
-                enforce: 'pre',
-                use: ['source-map-loader'],
             }
         ]
     },

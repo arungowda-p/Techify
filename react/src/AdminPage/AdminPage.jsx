@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { userService } from '@/_services';
+import { Role } from '@/_helpers';
 
 class AdminPage extends React.Component {
   constructor(props) {
@@ -16,7 +17,12 @@ class AdminPage extends React.Component {
   }
 
   componentDidMount() {
-    userService.getAll().then((users) => this.setState({ users }));
+    userService.getAll().then((users) => { 
+      const temp = users.filter( (value, index, err) => {
+        return value.role !== Role.Admin
+      })
+      users = temp
+      this.setState({ users })});
   }
 
   handleClick = (activeLink) => {
