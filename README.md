@@ -11,5 +11,7 @@ Admin - Login Credentails
     Password - Admin!123
 
 Test user credentails
-    username - Arun
-    password - Royal@123
+    username - test
+    password - Test@123
+    
+ We can add a User from Admin Dashboard
